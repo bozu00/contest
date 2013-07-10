@@ -1,0 +1,32 @@
+
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin >> n
+    while ( n!=0 ) 
+    {
+        int count=0;
+        for (i = n; i < 2n; i++) 
+        {
+            if (is_sosuu(i) = 1) 
+            {
+                count++
+            } 
+        }
+        
+        cout << count << endl;
+        cin >> n
+    }
+    return 0;
+}
+int is_sosuu(int n)
+{
+    for (int i = 2; i <sqrt( double(n) ) ; i++) 
+    {
+        if 
+    }
+}
