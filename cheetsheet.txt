@@ -95,4 +95,8 @@ inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
 
 
+cnoremap com :call CompileThisFile()
 
+function! CompileThisFile()
+  ! g++ -o "%:r" "%"
+endfunction
