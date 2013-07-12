@@ -1,9 +1,13 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <vector>
 #include <deque>
+#include <queue>
+#include <stack>
 #include <iostream>
 #include <string.h>
 #include <map>
+#include <algorithm>
 
 
 using namespace std;
@@ -75,6 +79,7 @@ for (it = s4.begin(); it < s4.end(); it++ )
     cout << *it << endl;
 
 
+
 // ----------  MAP  ---------- //
 /* --- 宣言 --- */
 map<string, int> m1;
@@ -92,7 +97,40 @@ for (ite = m1.begin(); ite != m1.end(); ite++)
 }
 
 
-// ----------  IO  ---------- //
+
+// ----------  QUEUE  ---------- // 
+/* --- 宣言 --- */
+queue<int> q1;
+queue<int> q2 = q1;
+queue<int> q3(q1);
+
+/* --- 操作 --- */
+q1.front();               //先頭の要素を取得
+q1.back();                //末尾の要素を取得
+q1.push(10);              //先頭に要素を追加
+q1.pop();                 //先頭の要素を削除
+
+q1.size();                //要素数を取得
+q1.empty();               //bool型で空ならtrue、その他はfalseを返す
+
+
+
+// ----------  STACK  ---------- // 
+/* --- 宣言 --- */
+stack<int> st1;
+stack<int> st2 = st1;
+stack<int> st3(st1);
+
+/* --- 操作 --- */
+st1.top();                 //先頭の要素を取得
+st1.push(10);              //先頭に要素を追加
+st1.pop();                 //先頭の要素を削除
+
+st1.size();                //要素数を取得
+st1.empty();               //bool型で空ならtrue、その他はfalseを返す
+
+
+// ----------  C_IO  ---------- //
 char c;
 while( (c = getchar() ) != EOF && c !='#' ) { cout << c; }
 
