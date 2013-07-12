@@ -1,0 +1,98 @@
+
+// ----------  VECTOR  ---------- //
+/* --- 宣言 --- */
+vector<int> v1;
+vector<int> v2(10);
+vector<int> v3 = v1;
+vector<int> v4(v1);
+
+/* --- 操作 --- */
+v1.front();               //先頭の要素を取得
+v1.back();                //末尾の要素を取得
+v1.push_back(10);         //末尾に要素を追加
+v1.pop_back();            //末尾に要素を追加
+
+v1.capacity();            //要素数を取得
+
+
+
+// ----------  DEQUE  ---------- //
+/* --- 宣言 --- */
+deque<int> deq1;
+deque<int> deq2(10);
+deque<int> deq3 = deq1;
+deque<int> deq4(deq1);
+
+/* --- 操作 --- */
+deq1.front();             //先頭の要素を取得
+deq1.back();              //末尾の要素を取得
+deq1.push_front(10);      //先頭に要素を追加
+deq1.pop_front();         //先頭の要素を削除
+deq1.push_back(10);       //末尾に要素を追加
+deq1.pop_back();          //末尾に要素を削除
+
+deq1[3];                  //3番目の要素を取得
+
+
+
+// ----------  STRING  --------- //
+/* --- 宣言 --- */
+string s1;
+string s2(s1);
+string s3 = s1;
+
+/* --- 操作 --- */
+s1.length();               //文字列の長さを取得
+
+s3 = s1 + s2;              //文字列の連結
+s3 += s1;                  //文字列の追加
+
+
+
+// ----------  MAP  ---------- //
+/* --- 宣言 --- */
+map<string, int> m1;
+map<string, int>::iterator ite;
+
+/* --- 操作 --- */
+m1.erase( "key");
+m1["key"] = 100;
+ite = m1.find( "key" );     //キーの位置を、存在しなければend()を返す
+
+for (ite = m1.begin(); ite != m1.end(); ite++)
+{
+    cout << ite->first << endl;          // キーを出力
+    cout << ite->second << endl;         // 値を出力
+}
+
+
+
+
+// ----------  VIM  ---------- //
+syntax on
+set expandtab                    
+set tabstop=2
+set shiftwidth=2
+set number
+set ruler
+set autoindent
+set smartindent       
+set cindent
+"改行後に「Backspace」キーを押すと上行末尾に戻る"
+"set backspace=1
+set whichwrap=b,s,h,l,<,>,[,] 
+
+
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
+
+
+
